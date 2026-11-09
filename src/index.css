@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: #f5f1e8;
+    color: #2b2e35;
+    font-family: 'Patrick Hand', 'Caveat', cursive, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom scrollbar matching notebook theme */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f4ede1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cfc5b4;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a89d89;
+  }
+}
+
+/* Hide scrollbar for clean notebook feel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Paper grain noise effect */
+.paper-noise {
+  background-image: radial-gradient(rgba(50, 40, 30, 0.06) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* Graphite pencil selection */
+::selection {
+  background-color: #e5dac6;
+  color: #1a1c20;
+}
