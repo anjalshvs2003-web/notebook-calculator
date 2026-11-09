@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { NotebookBackground } from './components/NotebookBackground';
 import { FloatingLeaves } from './components/FloatingLeaves';
+import { FloatingClouds } from './components/FloatingClouds';
 import { Calculator } from './components/Calculator';
 import { PianoAudioController } from './components/PianoAudioController';
 import { DecorativeDoodles } from './components/DecorativeDoodles';
+import { ShuttumaniHeartNote } from './components/ShuttumaniHeartNote';
 import { pencilSounds } from './audio/PencilSoundEffects';
 
 export const App: React.FC = () => {
@@ -16,6 +18,9 @@ export const App: React.FC = () => {
 
   return (
     <div className="relative min-h-screen w-full flex flex-col justify-between overflow-x-hidden">
+      {/* Background Floating Moving Clouds */}
+      <FloatingClouds />
+
       {/* Background Floating Leaves (drifting gently behind the calculator) */}
       <FloatingLeaves layer="background" />
 
@@ -86,6 +91,9 @@ export const App: React.FC = () => {
         {/* Central Sketched Calculator */}
         <main className="my-auto py-2 flex flex-col items-center justify-center">
           <Calculator />
+
+          {/* Sweet Handwritten Note & Heart Drawing on Notebook Page */}
+          <ShuttumaniHeartNote />
         </main>
       </NotebookBackground>
 
