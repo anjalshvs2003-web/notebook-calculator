@@ -22,7 +22,7 @@ export const DecorativeDoodles: React.FC = () => {
       {/* Hand-drawn caption above the calculator */}
       <div className="text-center my-2 select-none">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-caveat font-bold text-[#2a2d34] tracking-wide inline-block relative">
-          The Little Notebook
+          Nehil's Calculator
           {/* Subtle hand-drawn wavy underline */}
           <svg
             className="w-full h-3 -mt-1 text-[#3b404a] opacity-60"
